@@ -190,7 +190,7 @@ alias gpoat='git push origin --all && git push origin --tags'
 alias gpu='git push upstream'
 alias gpv='git push -v'
 
-alias gr='git remote'
+#alias gr='git remote'
 alias gra='git remote add'
 alias grb='git rebase'
 alias grba='git rebase --abort'
