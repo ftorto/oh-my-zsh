@@ -39,7 +39,7 @@ ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[green]%}▲%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_BEHIND="%{$fg[red]%}▼%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_STAGED="%{$fg_bold[green]%}●%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_UNSTAGED="%{$fg_bold[red]%}●%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[grey]%}•%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[grey]%}●%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg_bold[red]%}⥋%{$reset_color%}"
 
 ftorto_git_branch () {
