@@ -3,11 +3,12 @@ __timer_current_time() {
 }
 
 __timer_format_duration() {
-  local mins=$(printf '%.0f' $(($1 / 60)))
-  local secs=$(printf "%.${TIMER_PRECISION:-2}f" $(($1 - 60 * mins)))
-  local duration_str=$(echo "${mins}m${secs}s")
+  local hours=$(printf '%.0f' $(($1 / 3600)))
+  local mins=$(printf '%.0f' $((($1 - 3600 * hours) / 60)))
+  local secs=$(printf "%.${TIMER_PRECISION:-2}f" $((($1 - 3600 * hours) - 60 * mins)))
+  local duration_str=$(echo "${hours}h${mins}m${secs}s")
   local format="${TIMER_FORMAT:-/%d}"
-  echo "${format//\%d/${duration_str#0m}}"
+  echo "${format//\%d/${${duration_str#0h}#0m}}"
 }
 
 __timer_save_time_preexec() {
