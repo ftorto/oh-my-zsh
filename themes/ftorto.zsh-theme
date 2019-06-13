@@ -105,8 +105,9 @@ ftorto_git_prompt () {
 
 local current_dir='%{$terminfo[bold]$fg[blue]%}%~%{$reset_color%}'
 local git_branch='$(ftorto_git_prompt)%{$reset_color%}'
+local kcontext='${YELLOW}$(kubectl config current-context)%{$reset_color%}'
 
-PROMPT="╭${user_host} ${current_dir} ${git_branch}%{$reset_color%}
+PROMPT="╭${user_host} ${current_dir} ${git_branch} ${kcontext} %{$reset_color%}
 ╰%B${user_symbol}%b "
 RPS1="%B${return_code}%b"
 
